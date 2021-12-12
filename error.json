@@ -1,0 +1,58 @@
+{
+  "type": "http-log",
+  "timestamp": "2021-12-11T13:08:41.791+0000",
+  "level": "error",
+  "detail": {
+    "operation": {
+      "user_vars": { "x-hasura-role": "admin" },
+      "error": {
+        "internal": [
+          {
+            "definition": "materialize",
+            "reason": "Inconsistent object: connection error",
+            "name": "source materialize",
+            "type": "source",
+            "message": "unexpected status after setting params"
+          }
+        ],
+        "path": "$.args[0].args",
+        "error": "Inconsistent object: connection error",
+        "code": "invalid-configuration"
+      },
+      "request_id": "a1faa8ab-a91d-425f-a1ee-4b687df07d39",
+      "response_size": 290,
+      "query": {
+        "resource_version": 1,
+        "args": [
+          {
+            "args": {
+              "name": "materialize",
+              "configuration": {
+                "connection_info": {
+                  "use_prepared_statements": false,
+                  "database_url": "postgresql://materialize@materialize:6875/materialize",
+                  "isolation_level": "read-committed"
+                },
+                "read_replicas": null
+              },
+              "replace_configuration": false
+            },
+            "type": "pg_add_source"
+          }
+        ],
+        "source": "",
+        "type": "bulk"
+      },
+      "request_mode": "error"
+    },
+    "request_id": "a1faa8ab-a91d-425f-a1ee-4b687df07d39",
+    "http_info": {
+      "status": 400,
+      "http_version": "HTTP/1.1",
+      "url": "/v1/metadata",
+      "ip": "172.22.0.1",
+      "method": "POST",
+      "content_encoding": null
+    }
+  }
+}
